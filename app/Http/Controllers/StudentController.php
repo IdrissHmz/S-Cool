@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Student;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class StudentController extends Controller
 {
@@ -33,8 +35,8 @@ class StudentController extends Controller
      */
     public function index()
     {
-        $students= Student::with('user')->orderBy('arrival','asc')->get();
-        return view('dashboard.students',compact('students'));
+        $students= Student::with('user')->get();
+        return view('pages.StudentIndex',compact('students'));
     }
 
     /**
@@ -44,7 +46,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.CreateStudent');
     }
 
     /**
@@ -55,9 +57,14 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        $request->request->add(['user_id'=>1]);
+        $request->request->add(['user_type'=>2]);
+        User::create($request->all());
+        $recup = User::all();
+        $recupder = $recup->last();
+        $request->request->add(['user_id'=>$recupder->id]);
+        $request->request->add(['group_id'=>(int)$request->input('group')]);
         Student::create($request->all());
-        return redirect('dashboard/students')->with('success','student created!');
+        return redirect('admin/dashboard/students')->with('success','student created!');
     }
 
     /**
@@ -102,8 +109,11 @@ class StudentController extends Controller
      */
     public function destroy(Student $student)
     {
-        $student= Student::find($student->id);
+
+        $user_id=$student->user_id ;
         $student->delete();
-        return redirect('dashboard/students');
+        $user = User :: find($user_id);
+        $user->delete();
+        return redirect('admin/dashboard/students');
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Teacher;
+use App\User;
 use Illuminate\Http\Request;
 
 class TeacherController extends Controller
@@ -32,8 +33,8 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        $teachers= Teacher::with('user')->orderBy('arrival','asc')->get();
-        return view('dashboard.teachers',compact('teachers'));
+        $teachers= Teacher::with('user')->get();
+        return view('pages.TeacherIndex',compact('teachers'));
     }
 
     /**
@@ -43,7 +44,7 @@ class TeacherController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.CreateTeacher');
     }
 
     /**
@@ -54,9 +55,13 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        $request->request->add(['user_id'=>1]);
+        $request->request->add(['user_type'=>1]);
+        User::create($request->all());
+        $recup = User::all();
+        $recupder = $recup->last();
+        $request->request->add(['user_id'=>$recupder->id]);
         Teacher::create($request->all());
-        return redirect('dashboard/teachers')->with('success','teacher created!');
+        return redirect('admin/dashboard/teachers')->with('success','student created!');
     }
 
     /**
@@ -101,8 +106,11 @@ class TeacherController extends Controller
      */
     public function destroy(Teacher $teacher)
     {
-        $teacher= Teacher::find($teacher->id);
+
+        $user_id=$teacher->user_id ;
         $teacher->delete();
-        return redirect('dashboard/admins');
+        $user = User :: find($user_id);
+        $user->delete();
+        return redirect('admin/dashboard/teachers');
     }
 }

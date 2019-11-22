@@ -40,7 +40,17 @@ class User extends Authenticatable
     public function alerts(){
         return $this->hasMany('App\Alert');
     }
-    public function requests(){
-        return $this->hasMany('App\Request');
+    public function demands(){
+        return $this->hasMany('App\Demand');
     }
+    public function teacher(){
+        return $this->hasOne('App\Teacher');
+    }
+    public function student(){
+        return $this->hasOne('App\Student');
+    }
+   /* public function setPasswordAttribute($password)
+    {
+        $this->attributes['password'] = bcrypt($password);
+    }*/
 }

@@ -11,5 +11,8 @@ class Admin extends User
     protected $fillable = [
         'user_id',
     ];
+    public function user(){
+        return $this->belongsTo('App\User','user_id');
+    }
 
 }

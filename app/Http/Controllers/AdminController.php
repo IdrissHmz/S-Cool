@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use App\Admin ;
 use App\Student ;
@@ -23,11 +24,8 @@ class AdminController extends Controller
      */
 
     public function __construct()
-
     {
-
         $this->middleware('auth');
-
     }
 
     /**
@@ -37,8 +35,8 @@ class AdminController extends Controller
      */
     public function index()
     {
-        $admins= Admin::with('user')->orderBy('arrival','asc')->get();
-        return view('dashboard.admins',compact('admins'));
+        $admins= Admin::with('user')->get();
+        return view('pages.AdminIndex',compact('admins'));
     }
 
     /**
@@ -50,7 +48,7 @@ class AdminController extends Controller
     public function create()
     {
 
-        return view('dashboard.userCreate');
+        return view('pages.CreateAdmin');
     }
 
 
@@ -62,9 +60,13 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        $request->request->add(['user_id'=>1]);
+        $request->request->add(['user_type'=>0]);
+        User::create($request->all());
+        $recup = User::all();
+        $recupder = $recup->last();
+        $request->request->add(['user_id'=>$recupder->id]);
         Admin::create($request->all());
-        return redirect('dashboard/admins')->with('success','admin created!');
+        return redirect('admin/dashboard/admins')->with('success','student created!');
 
     }
 
@@ -111,9 +113,12 @@ class AdminController extends Controller
      */
     public function destroy(Admin $admin)
     {
-        $admin= Admin::find($admin->id);
+
+        $user_id=$admin->user_id ;
         $admin->delete();
-        return redirect('dashboard/admins');
+        $user = User :: find($user_id);
+        $user->delete();
+        return redirect('admin/dashboard/students');
 
     }
 }
