@@ -1,4 +1,4 @@
-@extends('pages.layout')
+@extends('layouts.app')
 @section('head')
     <META charset="utf-8"></META>
 @stop
@@ -11,6 +11,7 @@
 @section('content')
     {!! Form::open(['url' => 'admin\dashboard\students' , 'method'=>'POST']) !!}
     <div>
+        <test-vue></test-vue>
         <fieldset>
             {!! Form::label('first_name', 'First Name'); !!}
             {!! Form::text('first_name'); !!}

@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Admin;
+use App\Student;
 use App\Teacher;
 use App\User;
 use Illuminate\Http\Request;
+
 
 class TeacherController extends Controller
 {
@@ -33,8 +36,73 @@ class TeacherController extends Controller
      */
     public function index()
     {
+
         $teachers= Teacher::with('user')->get();
-        return view('pages.TeacherIndex',compact('teachers'));
+        $teachers_rect = array();
+        $i = 0;
+        foreach($teachers as $teacher){
+            $uss = $teacher->user;
+            $teachers_rect[$i] = array(
+                'first_name'=> $uss->first_name ,
+                'last_name'=> $uss->last_name ,
+                'email'=> $uss->email ,
+                'module'=> $teacher->module ,
+                'id'=> $teacher->id ,
+            );
+            $i++;
+        }
+
+        /*
+         *
+         *
+         * copier cette partie dans StudentController
+         *
+         */
+        $students= Student::with('user')->get();
+        $students_rect = array();
+        $i = 0;
+        foreach($students as $student){
+            $uss = $student->user;
+            $students_rect[$i] = array(
+                'first_name'=> $uss->first_name ,
+                'last_name'=> $uss->last_name ,
+                'email'=> $uss->email ,
+                'promo'=> $student->promo ,
+                'group'=> $student->group ,
+                'matricule'=> $student->matricule ,
+                'id'=> $student->id ,
+            );
+            $i++;
+        }
+
+
+
+        /*
+         *
+         *
+         * copier cette partie dans AdminController
+         *
+         */
+        $admins= Admin::with('user')->get();
+        $admins_rect = array();
+        $i = 0;
+        foreach($admins as $admin){
+            $uss = $admin->user;
+            $admins_rect[$i] = array(
+                'first_name'=> $uss->first_name ,
+                'last_name'=> $uss->last_name ,
+                'email'=> $uss->email ,
+                'promo'=> $admin->promo ,
+                'group'=> $admin->group ,
+                'matricule'=> $admin->matricule ,
+                'id'=> $admin->id ,
+            );
+            $i++;
+        }
+
+        $users = User::all();
+
+        return view('layouts.mylay',['teachers' => json_encode($teachers_rect),'students'=>json_encode($students_rect),'admins'=>json_encode($admins_rect),'users'=>$users]);
     }
 
     /**

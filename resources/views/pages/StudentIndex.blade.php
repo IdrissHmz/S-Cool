@@ -1,4 +1,4 @@
-@extends('pages.layout')
+@extends('layouts.mylay')
 @section('head')
     <META charset="utf-8"></META>
 @stop

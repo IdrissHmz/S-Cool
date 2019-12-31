@@ -2,12 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="186666b5-34dd-4f7e-8e80-84a5515a39d9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/database/seeds/AlertSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/DemandSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/MarkSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/SessionSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Resources/TeacherRes.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/element5-digital-OyCl7Y4y0Bk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/feliphe-schiarolli-hes6nUC1MVc-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/michal-parzuchowski-kKf1ZkS_wcs-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/moren-hsu-VLaKsTkmVhk-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/wes-hicks-4-EeTnaC1S4-unsplash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/mix-manifest.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/Vuetify/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Crud-Admins.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Crud-Users.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Crud-students.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/Crud.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/ExampleComponent.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/LoginForm.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/SideBar.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/js/components/TestVue.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/layouts/mylay.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/TeacherController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/sass/app.scss" beforeDir="false" afterPath="$PROJECT_DIR$/resources/sass/app.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/AdminIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/AdminIndex.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/CreateAdmin.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/CreateAdmin.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/CreateStudent.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/CreateStudent.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/CreateTeacher.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/CreateTeacher.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/StudentIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/StudentIndex.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/TeacherIndex.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/TeacherIndex.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webpack.mix.js" beforeDir="false" afterPath="$PROJECT_DIR$/webpack.mix.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -21,8 +54,22 @@
       <executable />
     </execution>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="Vue Single File Component" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -116,8 +163,12 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1TeA5Ld5fiO73OF9rkOVO2wT1ss" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../larav" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -127,7 +178,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="application.passwordSafe" />
+    <property name="settings.editor.selected.configurable" value="liveEdit" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\projets\Scolarit\public" />
+      <recent name="C:\wamp64\www\projets\Scolarit\resources" />
+      <recent name="C:\wamp64\www\projets\Scolarit\resources\images" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -166,7 +224,13 @@
       <workItem from="1574288953224" duration="19817000" />
       <workItem from="1574361967478" duration="5818000" />
       <workItem from="1574411697295" duration="3940000" />
-      <workItem from="1574415735951" duration="845000" />
+      <workItem from="1574415735951" duration="40005000" />
+      <workItem from="1574853763129" duration="21596000" />
+      <workItem from="1574931269966" duration="9029000" />
+      <workItem from="1575655021145" duration="1194000" />
+      <workItem from="1577120241257" duration="739000" />
+      <workItem from="1577794338471" duration="2041000" />
+      <workItem from="1577796834647" duration="10351000" />
     </task>
     <servers />
   </component>
@@ -185,5 +249,20 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/resources/js/components/Crud.vue</url>
+          <line>16</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
