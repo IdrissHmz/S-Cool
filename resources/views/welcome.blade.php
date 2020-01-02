@@ -50,9 +50,6 @@
                 top: 38px;
             }
 
-            .title {
-                font-size: 84px;
-            }
             .content {
                 height: 400px;
             }
@@ -77,11 +74,14 @@
 
             }
             .text-card {
+                border-radius: 50px;
                 padding: 50px;
                 margin: 50px;
                 width: 80%;
-                background: #fff3ec;
-                box-shadow: 5px 10px rgba(173, 216, 230, 0.48);
+                height: 80%;
+                background: rgb(87,196,218);
+                background: linear-gradient(354deg, rgba(87,196,218,1) 8%, rgba(255,255,255,1) 100%);
+                box-shadow: 5px 10px rgba(15, 10, 10, 0.48);
             }
             .text-card  button {
                 border-radius: 10%;
@@ -90,6 +90,7 @@
                 margin-top: 70px;
                 position: relative ;
                 left: 150px;
+
             }
             button a{
                 color: white;
@@ -98,8 +99,8 @@
             }
             .img-container{
                 position: relative;
-                padding: 30px;
-                margin: 30px;
+                padding: 25px;
+                margin: 20px;
             }
         </style>
     </head>
@@ -126,8 +127,8 @@
             <div class="content ">
                 <div class="presentation">
                     <div class="text-card">
-                        <h1 style="margin: 20px; "> S'Cool</h1>
-                        <p>
+                        <h1 style="margin: 20px; text-align:center;font-size: 40px "> S'Cool</h1>
+                        <p style="font-size:20px">
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque, dolores dolorum earum eius, est illo illum ipsum laudantium nesciunt pariatur provident quae quisquam reiciendis rem reprehenderit saepe suscipit ut.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque, dolores dolorum earum eius, est illo illum ipsum laudantium nesciunt pariatur provident quae quisquam reiciendis rem reprehenderit saepe suscipit ut.
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum cumque, dolores dolorum earum eius, est illo illum ipsum laudantium nesciunt pariatur provident quae quisquam reiciendis rem reprehenderit saepe suscipit ut.
@@ -135,7 +136,7 @@
                         <button><a href="{{ route('login') }}">CAMMENCER</a></button>
                     </div>
                     <div class="img-container">
-                        <img src="images/element5-digital-OyCl7Y4y0Bk-unsplash.jpg" alt="image" class="image" style="max-width: 100%;max-height: 100%">
+                        <img src="images/moren-hsu-VLaKsTkmVhk-unsplash.jpg" alt="image" class="image" style="max-width: 100%;max-height: 90%">
                     </div>
 
                 </div>

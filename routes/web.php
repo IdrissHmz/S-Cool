@@ -23,7 +23,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::group(['prefix'=>'admin/dashboard','middleware'=>'is_admin'],function(){
-    Route::view('/','pages.AdminDashboard')->name('admin.dashboard');
+    Route::resource('/','AdminController');
     Route::resource('/students','StudentController');
     Route::resource('/admins','AdminController');
     Route::resource('/teachers','TeacherController');

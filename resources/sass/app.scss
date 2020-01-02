@@ -1,3 +1,52 @@
 .header {
     background: #000;
 }
+.dashboard-sideBar{
+    background: #777777;
+    height: 100vh;
+    align-content: center;
+    display: inline-block;
+    flex-direction: row;
+    color: aliceblue;
+
+    .profile-info {
+        position: relative;
+        left: 110px;
+        width: 200px;
+        height: 200px;
+        display: block;
+        align-content: center;
+        align-items: center;
+        .logo{
+            position: relative;
+            left: 10px;
+            width: 150px;
+            height: 150px;
+            background-image: url(../images/logo.jpg);
+            background: #add8e6;
+            background-size: 100%;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        .info-email{
+            text-align: center;
+        }
+
+    }
+
+    .links{
+        padding: 0;
+        margin: 20px;
+        font-size: 28px;
+        .sub{
+            position: relative;
+            left: 40px;
+        }
+    }
+    a{
+        color: #bdbdbd;
+        &:hover{
+            color: white;
+        }
+    }
+}

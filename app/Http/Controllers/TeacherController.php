@@ -7,6 +7,8 @@ use App\Student;
 use App\Teacher;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class TeacherController extends Controller
@@ -37,28 +39,8 @@ class TeacherController extends Controller
     public function index()
     {
 
-        $teachers= Teacher::with('user')->get();
-        $teachers_rect = array();
-        $i = 0;
-        foreach($teachers as $teacher){
-            $uss = $teacher->user;
-            $teachers_rect[$i] = array(
-                'first_name'=> $uss->first_name ,
-                'last_name'=> $uss->last_name ,
-                'email'=> $uss->email ,
-                'module'=> $teacher->module ,
-                'id'=> $teacher->id ,
-            );
-            $i++;
-        }
 
-        /*
-         *
-         *
-         * copier cette partie dans StudentController
-         *
-         */
-        $students= Student::with('user')->get();
+        /*$students = Student::with('user')->get();
         $students_rect = array();
         $i = 0;
         foreach($students as $student){
@@ -73,36 +55,9 @@ class TeacherController extends Controller
                 'id'=> $student->id ,
             );
             $i++;
-        }
+        }*/
 
 
-
-        /*
-         *
-         *
-         * copier cette partie dans AdminController
-         *
-         */
-        $admins= Admin::with('user')->get();
-        $admins_rect = array();
-        $i = 0;
-        foreach($admins as $admin){
-            $uss = $admin->user;
-            $admins_rect[$i] = array(
-                'first_name'=> $uss->first_name ,
-                'last_name'=> $uss->last_name ,
-                'email'=> $uss->email ,
-                'promo'=> $admin->promo ,
-                'group'=> $admin->group ,
-                'matricule'=> $admin->matricule ,
-                'id'=> $admin->id ,
-            );
-            $i++;
-        }
-
-        $users = User::all();
-
-        return view('layouts.mylay',['teachers' => json_encode($teachers_rect),'students'=>json_encode($students_rect),'admins'=>json_encode($admins_rect),'users'=>$users]);
     }
 
     /**

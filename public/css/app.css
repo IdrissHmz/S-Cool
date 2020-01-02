@@ -2,3 +2,60 @@
   background: #000;
 }
 
+.dashboard-sideBar {
+  background: #777777;
+  height: 100vh;
+  align-content: center;
+  display: inline-block;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  color: aliceblue;
+}
+
+.dashboard-sideBar .profile-info {
+  position: relative;
+  left: 110px;
+  width: 200px;
+  height: 200px;
+  display: block;
+  align-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+.dashboard-sideBar .profile-info .logo {
+  position: relative;
+  left: 10px;
+  width: 150px;
+  height: 150px;
+  background-image: url(/images/logo.jpg?f2725feed37cafe9e3a4fd86d3764591);
+  background: #add8e6;
+  background-size: 100%;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.dashboard-sideBar .profile-info .info-email {
+  text-align: center;
+}
+
+.dashboard-sideBar .links {
+  padding: 0;
+  margin: 20px;
+  font-size: 28px;
+}
+
+.dashboard-sideBar .links .sub {
+  position: relative;
+  left: 40px;
+}
+
+.dashboard-sideBar a {
+  color: #bdbdbd;
+}
+
+.dashboard-sideBar a:hover {
+  color: white;
+}
+

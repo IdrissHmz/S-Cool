@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Mark;
 use App\Student;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Arr;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
 {
@@ -36,7 +39,10 @@ class StudentController extends Controller
     public function index()
     {
         $students= Student::with('user')->get();
-        return view('pages.StudentIndex',compact('students'));
+        $alerts = DB::table('alerts')->where('student_id','=', Auth::id() );
+        $demands = DB::table('demands')->where('student_id','=', Auth::id() );
+        $notes = DB::table('marks')->where('student_id','=', Auth::id() );
+        return view('pages.StudentIndex',compact('students','notes','alerts','demands'));
     }
 
     /**
